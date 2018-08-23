@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-course-1-abdous",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cardinal": "^2.1.1",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.8",
+    "number-to-words": "^1.2.4",
+    "v-number-to-words": "^1.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackYourFutureBelgium/nodejs-course-1-abdous.git"
+  },
+  "author": "Abdou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackYourFutureBelgium/nodejs-course-1-abdous/issues"
+  },
+  "homepage": "https://github.com/HackYourFutureBelgium/nodejs-course-1-abdous#readme"
+}

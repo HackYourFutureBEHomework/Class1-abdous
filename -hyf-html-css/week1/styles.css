@@ -1,0 +1,72 @@
+.title{
+    font-size: 50px;
+    font-style: italic;
+    color: blue;
+    text-align: center;
+    text-underline-position:
+}
+.Image{
+
+    padding: 5px;
+    border: 1px solid #ddd;  
+    border-radius: 4px;
+    width: 300;
+    height: 250;
+    float: right;
+
+
+}
+.title1{
+    font-size: 50px;
+    font-style: italic;
+    color: blue;
+    text-align: left;
+   
+}
+.Info{
+    font-size: 20px;
+    padding: 0;
+    text-align: justify;
+    line-height: 2;
+    word-spacing: 5px;
+}
+.title2{
+    font-size: 50px;
+    font-style: italic;
+    color: blue;
+    text-align: left;
+   
+}
+.Education{
+    font-size: 20px;
+    padding: 0;
+    line-height: 2;
+    
+
+}
+.Skill{
+    font-size: 50px;
+    font-style: italic;
+    color: blue;
+    text-align: left;
+    line-height: 2;
+    
+
+}
+.Experiences{
+    font-size: 20px;
+    padding: 0;
+    line-height: 2;
+}
+.title3{
+    font-size: 50px;
+    font-style: italic;
+    color: blue;
+    text-align: left;
+    }
+.References{
+    font-size: 20px;
+    padding: 0;
+    line-height: 2;
+    text-align: justify;
+}

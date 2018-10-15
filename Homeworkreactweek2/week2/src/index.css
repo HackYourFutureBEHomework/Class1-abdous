@@ -8,38 +8,41 @@
   padding: 3px;
 
 }
-.h{
+h1{
   color: brown;
    text-align: center;
 }
 
 
- 
- .container1 {
-	
-  
-  }
-
-.todos{
+.todoList{
   justify-content: center;
   width: 100%;
   padding: 2px;
   margin: auto;
 }
 
-.list{
+.listItem{
   /* background-color: aqua; */
   justify-content: space-between;
   width: 100%;
   height: 70px;
+  display: flex;
+  align-items: center;
 }
-.t{
-  justify-content: space-between
 
+.listItem:hover {
+  background-color: aliceblue;
 }
-.chkbox{
+
+label {
+  cursor: pointer;
+}
+
+label.done{
   text-decoration: line-through ;
   color: blue
-  
-} 
+
+}
+
+
 

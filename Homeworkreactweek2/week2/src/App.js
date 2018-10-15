@@ -1,86 +1,84 @@
-import React, { Component } from 'react';
-import './index.css';
-import todos from './todolist.json'
-import TodoItem from './components/todoitem.js'
-//import TodoItems from './components/todoitems.js'
-
-
-
-
+import React, { Component } from 'react'
+import './index.css'
+import todoList from './todolist.json'
+import TodoItem from './components/TodoItem.js'
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
-    this.state ={
+    this.state = {
 
-      mytodos: todos,
+      todoList: todoList,
       searchString: ''
     }
   }
 
-
-
   //  toggle to do done///
-  todoItemClicked = (index) =>{
-        const newData = this.state.mytodos.map( (item) => {
-  
-           if (index === item.id)
-               item.done = !item.done;
+  todoItemClicked = (index) => {
+    const newTodoList = this.state.todoList.map((todoItem) => {
 
-               return item;
-             });
+      if (index === todoItem.id)
+        todoItem.done = !todoItem.done
 
-        this.setState({mytodos: newData});
-
-   }
-  
-  
-  itemDeleted = (index) =>{
-    const deletedItem = this.state.mytodos.filter((item)=>{
-      return item.id !== index
+      return todoItem
     })
 
-    this.setState({mytodos: deletedItem});
+    this.setState({todoList: newTodoList})
+
   }
-  
-  
-  itemSearching = (e) =>{
+
+  itemDeleted = (index) => {
+    const newTodoList = this.state.todoList.filter((todoItem) => {
+      return todoItem.id !== index
+    })
+
+    this.setState({todoList: newTodoList})
+  }
+
+  itemSearching = (e) => {
     const searchString = e.target.value
     this.setState({
-        searchString: searchString});
+      searchString: searchString
+    })
   }
 
-
-  render(){
-    const filteredItems = this.state.mytodos.filter((repo)=>{
-        const regex = new RegExp(this.state.searchString, 'g')
-        return regex.test(todos.description)
+  render () {
+    const filteredItems = this.state.todoList.filter((todoItem) => {
+      const regex = new RegExp(this.state.searchString, 'g')
+      return regex.test(todoItem.description)
     })
-    const mytodos = this.state.mytodos
+
+    const todoList = filteredItems.map((todoItem, index) => {
+      return (
+        <TodoItem
+          key={index}
+          todoItem={todoItem}
+          todoItemClicked={this.todoItemClicked}
+          itemDeleted={this.itemDeleted}
+        />
+      )
+    })
 
     return (
-      
-      <div className = "container">
-        <h1 className='h'>My Todo List </h1>
-        <input className='search' 
-            placeholder ='begin seaching' 
-            type='text'  
-            onChange={this.itemSearching}/>
-            <TodoItem  className='container1' filteredItems={filteredItems}
-            todoItemClicked={this.todoItemClicked}
-            itemDeleted={this.itemDeleted}
-            />
 
+      <div className="container">
+        <h1>My Todo List </h1>
+        <input
+          className='search'
+          placeholder='begin searching'
+          type='text'
+          onChange={this.itemSearching}
+        />
 
+        <li className='todoList'>
+          {todoList}
+        </li>
 
       </div>
     )
   }
 }
 
-
-
-
-export default App;
+export default App

@@ -1,0 +1,42 @@
+.container{
+  border: 5px solid red;
+  width: 50%;
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3px;
+
+}
+h1{
+  color: brown;
+   text-align: center;
+}
+
+ 
+ 
+
+  .todoList{
+    justify-content: center;
+    width: 100%;
+    padding: 2px;
+    margin: auto;
+  }
+  
+
+  .listItem{
+    /* background-color: aqua; */
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  .listItem:hover {
+    background-color: aliceblue;
+  }
+  label.done{
+    text-decoration: line-through ;
+    color: blue
+} 
+

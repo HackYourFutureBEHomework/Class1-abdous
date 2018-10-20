@@ -12,7 +12,7 @@ class App extends Component {
   constructor (props) {
     super(props)
 
-    this.state ={
+    this.state = {
 
       todoList: todoList,
       searchString: ''
@@ -53,6 +53,11 @@ class App extends Component {
     })
   }
 
+  render () {
+    const filteredItems = this.state.todoList.filter((todoItem) => {
+      const regex = new RegExp(this.state.searchString, 'g')
+      return regex.test(todoItem.description)
+    })
 
   render(){
     const filteredItems = this.state.todoList.filter((todoItem) => {
@@ -90,6 +95,6 @@ class App extends Component {
   )
 }
 }
-
+}
 
 export default App;

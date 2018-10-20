@@ -1,9 +1,17 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
+=======
+
+>>>>>>> b94788cbd29aedf65e84f6711aa7d68c2c180ede
 class TodoItem extends Component {
   render () {
     const {id, description, deadline, done} = this.props.todoItem
     const todoItemClicked = this.props.todoItemClicked
     const itemDeleted = this.props.itemDeleted
+<<<<<<< HEAD
+=======
+
+>>>>>>> b94788cbd29aedf65e84f6711aa7d68c2c180ede
     return (
       <label className={done ? 'done' : ''}>
         <div className="listItem">
@@ -18,9 +26,18 @@ class TodoItem extends Component {
           <span>
             <button type="button" className="deleteButton" onClick={() => {itemDeleted(id)}}>Delete</button>
           </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b94788cbd29aedf65e84f6711aa7d68c2c180ede
         </div>
       </label>
     )
   }
 }
+<<<<<<< HEAD
 export default TodoItem 
+=======
+
+export default TodoItem
+>>>>>>> b94788cbd29aedf65e84f6711aa7d68c2c180ede
